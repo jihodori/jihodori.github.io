@@ -1,38 +1,112 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    color: #fff; /* Changed to white to contrast with the dark background */
+    background: url('earth_background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make text readable */
+    color: #fff;
+    padding: 2rem 0;
     text-align: center;
-    padding: 2em 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.25rem;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    padding: 0.5rem 0;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     text-align: center;
-    background-color: #f4f4f4;
     margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
+    font-size: 1rem;
 }
 
 main {
-    padding: 2em;
+    padding: 2rem;
     max-width: 800px;
-    margin: auto;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
 }
 
-section p {
-    margin: 1em 0;
+main h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+main p {
+    margin: 1rem 0;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#contact a {
+    color: #007bb5; /* LinkedIn blue */
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#contact i {
+    margin-left: 0.5rem;
+    color: #007bb5; /* LinkedIn blue for icons */
+}
+
+#contact i:hover {
+    color: #005983; /* Darker blue on hover */
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
 }

@@ -19,10 +19,38 @@
             margin-bottom: 0.4rem;
         }
 
+        .paper-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .venue-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid #76b4ff;
+            background: rgba(118, 180, 255, 0.12);
+            color: #c8e0ff;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
         .paper-authors {
             color: #ccc;
             font-size: 0.95rem;
             margin-bottom: 1rem;
+        }
+
+        .paper-meta {
+            color: #b7c0c9;
+            font-size: 0.86rem;
+            margin-bottom: 0.9rem;
         }
 
         .paper-figures {
@@ -151,6 +179,39 @@
                     search-and-rescue task by integrating it with FastSLAM 2.0, where the agent must simultaneously
                     localize itself and locate victims under partial observability.
                 </p>
+            </div>
+
+            <div class="paper-card">
+                <div class="paper-header">
+                    <div class="paper-title">Rao-Blackwellized POMDP Planning</div>
+                    <span class="venue-badge">ICRA 2025</span>
+                </div>
+                <div class="paper-authors">Jiho Lee, Nisar Ahmed, Kyle Hollins Wray, Zachary Sunberg</div>
+                <div class="paper-meta">2025 IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA</div>
+                <div class="paper-figures">
+                    <figure>
+                        <img src="images/rb_pomcpow_comparison.png"
+                            alt="POMCPOW and RB-POMCPOW tree structure comparison">
+                        <figcaption>POMCPOW (left) and RB-POMCPOW (right) Tree Structure Comparison. Each square and
+                            larger circle represents an action node and an observation node, respectively. In the
+                            POMCPOW tree, particles are shown as black dots while each particle in the RB-POMCPOW tree
+                            is associated with a Gaussian distribution. Due to the nature of POMCPOW, these particles
+                            form a weighted mixture of beliefs.</figcaption>
+                    </figure>
+                </div>
+                <p class="paper-description">
+                    Partially Observable Markov Decision Processes (POMDPs) provide a structured framework for
+                    decision-making under uncertainty, but practical deployment depends on efficient belief updates and
+                    scalable online planning. This paper introduces Rao-Blackwellized POMDP (RB-POMDP) approximate
+                    solvers and a new RB-POMCPOW planner that combines analytical filtering with quadrature-based
+                    integration to reduce variance in both estimation and value computation. In a GPS-denied
+                    localization task, the proposed approach improves planning quality and computational efficiency
+                    compared to standard particle-filter-based POMCPOW under matched computational limits.
+                </p>
+                <div class="paper-links">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/11128426" target="_blank"
+                        rel="noopener noreferrer">IEEE Xplore</a>
+                </div>
             </div>
 
         </section>

@@ -148,6 +148,43 @@
             <h2>Publications</h2>
 
             <div class="paper-card">
+                <div class="paper-title">Hybrid Adaptive Kalman Filtering for Data-Efficient Joint Tracking and
+                    Classification</div>
+                <div class="paper-authors">Jiho Lee, Nisar R. Ahmed, Rebecca Russell</div>
+                <div class="paper-figures">
+                    <figure>
+                        <img src="images/hakf_architecture.png"
+                            alt="HAKF architecture diagram showing prediction, measurement update, and an adaptive neural correction loop driven by innovations">
+                        <figcaption>HAKF architecture. The prediction and measurement correction steps follow the
+                            classical KF framework. An adaptive neural network module uses features derived from the
+                            innovation sequence and state updates to estimate a transition correction
+                            &Delta;<em>F</em><sup>ML</sup> and process noise covariance <em>Q</em><sup>ML</sup>, which
+                            are used to compensate for model mismatch in the prediction step.</figcaption>
+                    </figure>
+                </div>
+                <p class="paper-description">
+                    Kalman filter performance is highly sensitive to model mismatch and noise covariance tuning.
+                    Classical adaptive filters estimate these parameters from measurements, but assume a correctly
+                    specified model structure &mdash; structural mismatch outside that assumption induces bias and
+                    temporally correlated innovations that parameter adaptation alone cannot fix. Learning-based filters
+                    are more flexible but typically require supervised training on large ground-truth datasets and
+                    rarely produce consistent uncertainty estimates. This work proposes a self-supervised Hybrid
+                    Adaptive Kalman Filter (HAKF) that integrates classical adaptive filtering principles with
+                    data-driven methods: a neural module learns structured corrections to the system dynamics and
+                    process noise covariance directly from measurements, while preserving the probabilistic structure of
+                    the filter. Because the filter's structure is preserved, the resulting innovation likelihood can be
+                    used for model classification via generalized Bayesian inference &mdash; so the same architecture
+                    performs both state estimation and probabilistic model classification. Experiments on real-world
+                    indoor drone tracking (DPJAIT) and high-fidelity AirSim trajectories show improved estimation
+                    accuracy and substantially better statistical consistency (NEES/NIS) than a tuned classical KF, with
+                    robust classification performance across both low-data and large-data regimes.
+                </p>
+                <div class="paper-links">
+                    <a href="images/HAKF.pdf" target="_blank" rel="noopener noreferrer">Paper (PDF)</a>
+                </div>
+            </div>
+
+            <div class="paper-card">
                 <div class="paper-title">Scalable Rao-Blackwellized Online Planning for High-Dimensional POMDPs</div>
                 <div class="paper-figures">
                     <figure>
